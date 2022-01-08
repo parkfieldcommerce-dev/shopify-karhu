@@ -1,0 +1,47 @@
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+
+<div class="row resources slider-container">
+    <div class="container" id="resource-slider">
+        <button class='arrow prev'>
+            <img class="btn-arrow" src="{{ 'left.png' | asset_url }}">
+        </button>
+        <button class='arrow next'>
+            <img class="btn-arrow" src="{{ 'right.png' | asset_url }}">
+        </button>
+        <div class="resource-slider-frame">
+                
+              {% if section.settings.products_featured_collection != blank %}
+                {% if collections[section.settings.products_featured_collection].products_count != 0 %}
+                    {% for product in collections[section.settings.products_featured_collection].products %}
+                         <div class="resource-slider-item">
+                            <div class="resource-slider-inset">
+                                <div class="resource">
+                                    <img class="product_image" src="{{ product.featured_image | img_url: '600x600' }}" />
+                                    <div class="product-title"><p>{{ product.title }}</p></div>
+                                    <div class="product-button"><a href="{{ product.url }}" class="button button_shop_now">Shop Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="{{ 'collection.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+    "name": "Products in sidebar",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "products_featured_collection",
+        "label": "Featured products in sidebar"
+      }
+    ]
+  }
+  {% endschema %}

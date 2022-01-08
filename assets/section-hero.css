@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "GT America";
+    src: url("GT-America-Regular.ttf") format("truetype")
+}
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -68%);
+    width: 830px;
+}
+.hero-button {
+    position: absolute;
+    width: 100%;
+    top: 69%;
+}
+.hero-button a.button{
+    font-size: 16px;
+    font-family: 'GT America';
+    background: transparent;
+    outline: solid 1px #fff;
+    text-transform: capitalize;
+}
+.hero-title h1{
+    font-size: 125px;
+    line-height: 110px;
+    font-weight: 700;
+    letter-spacing: -12px;
+    color: #fff;
+    font-family: "GT America";
+    text-transform: uppercase;
+    transform: scale(1, 1.3);
+}
+.hero-page-width {
+    padding: 0 5rem;
+}
+.hero-arrow{
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+}
+.hero-arrow .btn-arrow img{
+    width: 50px;
+}
+/* BEGIN HERO RESPONSIVE */
+@media screen and (min-width: 1500px) {
+    .hero-image {
+        width: 1500px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .hero-page-width {
+        padding: 0px;
+    }
+    .hero-title {
+        width: 640px;
+    }
+    .hero-title h1 {
+        font-size: 90px;
+        line-height: 80px;
+        letter-spacing: -5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-arrow{
+        visibility: hidden;
+    }
+    .hero-title {
+        width: 380px;
+    }
+    .hero-title h1 {
+        font-size: 47px;
+        line-height: 50px;
+        letter-spacing: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    .hero-title {
+        width: 300px;
+    }
+    .hero-title h1 {
+        font-size: 40px;
+        line-height: 37px;
+        letter-spacing: 0;
+    }
+    .hero-button a.button {
+        padding: 0px 15px !important;
+        font-size: 13px;
+    }
+}
+/* END HERO RESPONSIVE */
