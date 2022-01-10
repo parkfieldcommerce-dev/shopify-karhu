@@ -2,11 +2,18 @@
   "sections": {
     "image_banner": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1.png",
+        "title": "karhu summer camp",
+        "button_label": "shop collection",
+        "button_link": "shopify:\/\/collections\/featured-products-collection"
+      }
     },
     "collections": {
       "type": "collections",
-      "settings": {}
+      "settings": {
+        "products_featured_collection": "featured-products-collection"
+      }
     }
   },
   "order": [

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "GT America";
-    src: url("GT-America-Regular.ttf") format("truetype")
+    src: url("GT-America-Bold.ttf") format("truetype")
 }
 .hero-content {
     position: relative;
@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -68%);
-    width: 830px;
+    width: 900px;
 }
 .hero-button {
     position: absolute;
@@ -36,9 +36,9 @@
     text-transform: uppercase;
     transform: scale(1, 1.3);
 }
-.hero-page-width {
+/* .hero-page-width {
     padding: 0 5rem;
-}
+} */
 .hero-arrow{
     visibility: visible;
     position: absolute;
@@ -48,11 +48,15 @@
 .hero-arrow .btn-arrow img{
     width: 50px;
 }
+.hero-image {
+    width: 100%;
+    height: auto;
+}
 /* BEGIN HERO RESPONSIVE */
 @media screen and (min-width: 1500px) {
-    .hero-image {
+    /* .hero-image {
         width: 1500px;
-    }
+    } */
 }
 @media screen and (max-width: 1500px) {
     .hero-image {
@@ -86,13 +90,13 @@
         letter-spacing: 0;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
     .hero-title {
         width: 300px;
     }
     .hero-title h1 {
-        font-size: 40px;
-        line-height: 37px;
+        font-size: 36px;
+        line-height: 33px;
         letter-spacing: 0;
     }
     .hero-button a.button {
