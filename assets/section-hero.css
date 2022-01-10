@@ -91,16 +91,31 @@
     }
 }
 @media screen and (max-width: 460px) {
+    .hero-content{
+        overflow-x: hidden;
+        margin-left: -102px;
+    }
+    .hero-content img{
+        width: 195%;
+    }
     .hero-title {
         width: 300px;
+        left: calc(50% + -99px);
+        transform: scale(1, 1.5);
+        top: 37%;
     }
     .hero-title h1 {
         font-size: 36px;
         line-height: 33px;
         letter-spacing: 0;
     }
+    .hero-button {
+        position: absolute;
+        width: 100%;
+        top: 63%;
+        left: 10%;
+    }
     .hero-button a.button {
-        padding: 0px 15px !important;
         font-size: 13px;
     }
 }
